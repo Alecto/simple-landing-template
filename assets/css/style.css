@@ -1,6 +1,7 @@
 .header,
 .html,
-.css {
+.css,
+.javascript {
   position: relative;
 
   overflow: hidden;
@@ -10,7 +11,8 @@
 }
 
 .html__title,
-.css__title {
+.css__title,
+.javascript__title {
   margin: 0 0 0.4em;
 
   text-align: center;
@@ -22,7 +24,8 @@
 }
 
 .html__title b,
-.css__title b {
+.css__title b,
+.javascript__title b {
   padding-left: 20px;
 
   text-transform: uppercase;
@@ -30,48 +33,15 @@
   font-weight: 900;
 }
 
-.html__subtitle,
-.css__subtitle {
-  position: relative;
-
-  margin: 0 0 3em;
-
-  text-align: center;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-
-  font-size: 3rem;
-  font-weight: 100;
-  line-height: 1.25em;
-}
-
-.html__subtitle span,
-.css__subtitle span {
-  white-space: nowrap;
-}
-
-.html__subtitle::after,
-.css__subtitle::after {
-  position: absolute;
-  bottom: -1em;
-  left: 50%;
-
-  width: 20%;
-  height: 3px;
-
-  content: "";
-  transform: translateX(-50%);
-
-  background-color: #ffffff;
-}
-
 .html__logo img,
-.css__logo img {
+.css__logo img,
+.javascript__logo img {
   width: 200px;
 }
 
 .html__description,
-.css__description {
+.css__description,
+.javascript__description {
   margin: -0.3em 0 0 0;
 
   font-size: 2rem;
@@ -79,7 +49,8 @@
 }
 
 .html__col-2,
-.css__col-2 {
+.css__col-2,
+.javascript__col-2 {
   display: flex;
 
   gap: 70px;
@@ -144,6 +115,7 @@ a {
   padding: 0.5em 1em;
 
   transition: background-color 1s;
+  text-align: center;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 
@@ -279,12 +251,44 @@ a {
   position: relative;
 }
 
+.html__subtitle {
+  position: relative;
+
+  margin: 0 0 3em;
+
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  font-size: 3rem;
+  font-weight: 100;
+  line-height: 1.25em;
+}
+
+.html__subtitle span {
+  white-space: nowrap;
+}
+
+.html__subtitle::after {
+  position: absolute;
+  bottom: -1em;
+  left: 50%;
+
+  width: 20%;
+  height: 3px;
+
+  content: "";
+  transform: translateX(-50%);
+
+  background-color: #ffffff;
+}
+
 .css {
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background-color: #034052;
+  background-color: #ffc080;
   background-image: url(../img/css3.jpg);
   background-position: 50% 50%;
   background-size: cover;
@@ -297,7 +301,7 @@ a {
   bottom: 0;
   left: 0;
 
-  opacity: 0.9;
+  opacity: 0.85;
   background-color: #fff3e6;
 }
 
@@ -306,4 +310,95 @@ a {
   z-index: 1;
 
   color: #034052;
+}
+
+.css__subtitle {
+  position: relative;
+
+  margin: 0 0 3em;
+
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  font-size: 3rem;
+  font-weight: 100;
+  line-height: 1.25em;
+}
+
+.css__subtitle span {
+  white-space: nowrap;
+}
+
+.css__subtitle::after {
+  position: absolute;
+  bottom: -1em;
+  left: 50%;
+
+  width: 20%;
+  height: 3px;
+
+  content: "";
+  transform: translateX(-50%);
+
+  background-color: #034052;
+}
+
+.javascript {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #034052;
+  background-image: url(../img/js.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.javascript__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  opacity: 0.85;
+  background-color: #011a21;
+}
+
+.javascript__content {
+  position: relative;
+  z-index: 1;
+}
+
+.javascript__subtitle {
+  position: relative;
+
+  margin: 0 0 3em;
+
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  font-size: 3rem;
+  font-weight: 100;
+  line-height: 1.25em;
+}
+
+.javascript__subtitle span {
+  white-space: nowrap;
+}
+
+.javascript__subtitle::after {
+  position: absolute;
+  bottom: -1em;
+  left: 50%;
+
+  width: 20%;
+  height: 3px;
+
+  content: "";
+  transform: translateX(-50%);
+
+  background-color: #ffffff;
 }

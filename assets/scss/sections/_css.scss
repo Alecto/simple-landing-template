@@ -1,5 +1,5 @@
 .css {
-  background-color: $color-secondary-2-4;
+  background-color: $color-secondary-1-1;
   background-image: url(../img/css3.jpg);
   background-position: 50% 50%;
   background-size: cover;
@@ -11,7 +11,7 @@
 
   &__overlay {
     @include abs-position;
-    opacity: 0.9;
+    opacity: 0.85;
     background-color: lighten($color-secondary-1-1, 20%);
   }
 
@@ -26,7 +26,7 @@
   }
 
   &__subtitle {
-    @extend %section-subtitle;
+    @include section-subtitle($color-secondary-2-4);
   }
 
   &__col-2 {
