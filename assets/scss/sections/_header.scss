@@ -1,0 +1,65 @@
+.header {
+  background-color: $color-secondary-2-4;
+  background-image: url(../img/potential.jpg);
+  background-position: 50% 80%;
+  background-size: cover;
+
+  @extend %section;
+
+  &::after {
+    @include abs-position;
+    content: "";
+    clip-path: polygon(100% 20%, 100% 70%, 30% 100%, 0% 100%);
+    background-color: red;
+    opacity: 0.2;
+  }
+
+  &__overlay {
+    @include abs-position;
+    opacity: 0.5;
+
+    &::before {
+      @include abs-position;
+      content: "";
+      clip-path: polygon(0 0, 100% 0, 100% 20vh, 0% 100%); // https://bennettfeely.com/clippy/
+      background-color: $color-secondary-2-4;
+    }
+
+    &::after {
+      @include abs-position;
+      content: "";
+      clip-path: polygon(100% 70vh, 30% 100%, 100% 100%); // https://bennettfeely.com/clippy/
+      background-color: $color-secondary-2-4;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: 10%;
+    left: 7%;
+    font-size: 7rem;
+    margin: 0;
+    text-transform: uppercase;
+    width: 100%;
+
+    span {
+      display: block;
+
+      &:nth-of-type(1) {
+        font-weight: 100;
+        letter-spacing: 80px;
+      }
+
+      &:nth-of-type(2) {
+        font-weight: 400;
+        letter-spacing: 50px;
+      }
+
+      &:nth-of-type(3) {
+        font-weight: 900;
+        letter-spacing: 15px;
+      }
+    }
+  }
+}
+

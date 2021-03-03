@@ -1,0 +1,85 @@
+.html {
+  background-color: $color-secondary-2-4;
+  background-image: url(../img/html5.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @extend %section;
+
+  &__overlay {
+    @include abs-position;
+    opacity: 0.9;
+    background-color: darken($color-secondary-2-4, 10%);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    font-size: 5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 0 0 0.4em;
+    letter-spacing: 0.1em;
+    text-align: center;
+
+
+    b {
+      padding-left: 20px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+    }
+
+  }
+
+  &__subtitle {
+    position: relative;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin: 0 0 3em;
+    letter-spacing: 0.1em;
+    font-weight: 100;
+    text-align: center;
+
+    span {
+      white-space: nowrap;
+    }
+
+    &::after {
+      content: "";
+      height: 3px;
+      width: 20%;
+      background-color: $color-light;
+      position: absolute;
+      bottom: -1em;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__col-2 {
+    display: flex;
+    gap: 70px;
+  }
+
+  &__description {
+    margin: -0.3em 0 0 0;
+    font-size: 2rem;
+    line-height: 1.5em;
+  }
+
+  &::before {
+    @include abs-position;
+    content: "";
+    clip-path: polygon(0 0, 0 15vh, 30% 0);
+    background-color: red;
+    opacity: 0.2;
+    z-index: 1;
+  }
+}

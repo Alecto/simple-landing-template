@@ -3,7 +3,7 @@
 require('/webProjects/gulp/gulp-init.js')({HTML: '.'});
 
 const comb = require('/webProjects/gulp/tasks/comb.js'),
-    scssDC     = require('/webProjects/gulp/tasks/scss.js').scssDC,
+    scssDC     = require('/webProjects/gulp/tasks/scss.js').scssNoMediaWendor,
     mincss   = require('/webProjects/gulp/tasks/mincss.js'),
     uglifyes = require('/webProjects/gulp/tasks/uglify.js').uglifyes,
     { sync, syncInit } = require('/webProjects/gulp/tasks/sync.js');
