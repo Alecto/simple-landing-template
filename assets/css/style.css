@@ -1,11 +1,88 @@
 .header,
-.html {
+.html,
+.css {
   position: relative;
 
   overflow: hidden;
 
   max-width: 100%;
   min-height: 100vh;
+}
+
+.html__title,
+.css__title {
+  margin: 0 0 0.4em;
+
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  font-size: 5rem;
+  font-weight: 300;
+}
+
+.html__title b,
+.css__title b {
+  padding-left: 20px;
+
+  text-transform: uppercase;
+
+  font-weight: 900;
+}
+
+.html__subtitle,
+.css__subtitle {
+  position: relative;
+
+  margin: 0 0 3em;
+
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  font-size: 3rem;
+  font-weight: 100;
+  line-height: 1.25em;
+}
+
+.html__subtitle span,
+.css__subtitle span {
+  white-space: nowrap;
+}
+
+.html__subtitle::after,
+.css__subtitle::after {
+  position: absolute;
+  bottom: -1em;
+  left: 50%;
+
+  width: 20%;
+  height: 3px;
+
+  content: "";
+  transform: translateX(-50%);
+
+  background-color: #ffffff;
+}
+
+.html__logo img,
+.css__logo img {
+  width: 200px;
+}
+
+.html__description,
+.css__description {
+  margin: -0.3em 0 0 0;
+
+  font-size: 2rem;
+  line-height: 1.5em;
+}
+
+.html__col-2,
+.css__col-2 {
+  display: flex;
+
+  gap: 70px;
 }
 
 * {
@@ -41,6 +118,48 @@ a {
   padding: 100px 20px;
 }
 
+.navbar {
+  position: fixed;
+  z-index: 999;
+  top: 50%;
+  right: 0;
+
+  transform: translateY(-50%);
+}
+
+.navbar__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.navbar__item.active a {
+  background-color: red;
+}
+
+.navbar__link {
+  display: block;
+
+  padding: 0.5em 1em;
+
+  transition: background-color 1s;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  opacity: 0.5;
+  color: #ffffff;
+  background-color: rgba(87, 150, 167, 0.25);
+
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+.navbar__link:hover {
+  opacity: 1;
+  background-color: rgba(87, 150, 167, 0.5);
+}
+
 .header {
   background-color: #034052;
   background-image: url(../img/potential.jpg);
@@ -57,9 +176,9 @@ a {
 
   content: "";
 
-  background: linear-gradient(to right, rgba(213, 61, 39, 0.6) 0%, rgba(213, 61, 39, 0.3) 50%, rgba(213, 61, 39, 0.1) 100%);
+  background: linear-gradient(to right, rgba(213, 61, 39, 0.5) 0%, rgba(213, 61, 39, 0.25) 50%, rgba(213, 61, 39, 0.1) 100%);
 
-  clip-path: polygon(100% 20%, 100% 70%, 30% 100%, 0% 100%);
+  clip-path: polygon(0 100%, 75% 0, 100% 0, 100% 72%);
 }
 
 .header__overlay {
@@ -72,6 +191,7 @@ a {
 
 .header__overlay::before {
   position: absolute;
+  z-index: 1;
   top: 0;
   right: 0;
   bottom: 0;
@@ -79,10 +199,10 @@ a {
 
   content: "";
 
-  opacity: 0.5;
+  opacity: 0.4;
   background-color: #034052;
 
-  clip-path: polygon(0 0, 100% 0, 100% 20vh, 0% 100%);
+  clip-path: polygon(0 0, 75% 0, 0% 100%);
 }
 
 .header__overlay::after {
@@ -94,21 +214,21 @@ a {
 
   content: "";
 
-  opacity: 0.75;
+  opacity: 0.5;
   background-color: #034052;
 
-  clip-path: polygon(100% 70vh, 30% 100%, 100% 100%);
+  clip-path: polygon(100% 72%, 0% 100%, 100% 100%);
 }
 
 .header__title {
   position: absolute;
-  top: 10%;
+  top: 7%;
   left: 7%;
 
   width: 100%;
   margin: 0;
 
-  letter-spacing: 0.1em;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
 
   font-size: 7rem;
@@ -127,8 +247,9 @@ a {
 }
 
 .header__title span:nth-of-type(3) {
-  letter-spacing: 0.1em;
+  letter-spacing: 0;
 
+  font-size: 10rem;
   font-weight: 900;
 }
 
@@ -156,101 +277,33 @@ a {
 
 .html__content {
   position: relative;
-  z-index: 1;
 }
 
-.html__title {
-  margin: 0 0 0.4em;
-
-  text-align: center;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-
-  font-size: 5rem;
-  font-weight: 300;
-}
-
-.html__title b {
-  padding-left: 20px;
-
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-
-  font-weight: 900;
-}
-
-.html__subtitle {
-  position: relative;
-
-  margin: 0 0 3em;
-
-  text-align: center;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-
-  font-size: 3rem;
-  font-weight: 100;
-}
-
-.html__subtitle span {
-  white-space: nowrap;
-}
-
-.html__subtitle::after {
-  position: absolute;
-  bottom: -1em;
-  left: 50%;
-
-  width: 20%;
-  height: 3px;
-
-  content: "";
-  transform: translateX(-50%);
-
-  background-color: #ffffff;
-}
-
-.html__col-2 {
+.css {
   display: flex;
+  align-items: center;
+  justify-content: center;
 
-  gap: 70px;
-}
-
-.html__description {
-  margin: -0.3em 0 0 0;
-
-  font-size: 2rem;
-  line-height: 1.5em;
-}
-
-.html::before {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  content: "";
-
-  opacity: 0.5;
-  background-color: #d53d27;
-
-  clip-path: polygon(0 0, 0 15vh, 30% 0);
-}
-
-.html::after {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  content: "";
-
-  opacity: 0.75;
   background-color: #034052;
+  background-image: url(../img/css3.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+}
 
-  clip-path: polygon(30% 0, 100% 0, 0 25%, 0 15vh);
+.css__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  opacity: 0.9;
+  background-color: #fff3e6;
+}
+
+.css__content {
+  position: relative;
+  z-index: 1;
+
+  color: #034052;
 }

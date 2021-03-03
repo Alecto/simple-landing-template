@@ -1,6 +1,6 @@
-.html {
+.css {
   background-color: $color-secondary-2-4;
-  background-image: url(../img/html5.jpg);
+  background-image: url(../img/css3.jpg);
   background-position: 50% 50%;
   background-size: cover;
   display: flex;
@@ -12,11 +12,13 @@
   &__overlay {
     @include abs-position;
     opacity: 0.9;
-    background-color: darken($color-secondary-2-4, 10%);
+    background-color: lighten($color-secondary-1-1, 20%);
   }
 
   &__content {
     position: relative;
+    z-index: 1;
+    color: $color-secondary-2-4;
   }
 
   &__title {

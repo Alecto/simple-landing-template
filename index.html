@@ -16,16 +16,33 @@
 </head>
 <body>
 
-<section class="header">
+<section class="header" id="header">
+
+  <nav class="navbar">
+    <ul class="navbar__list" id="navbar">
+      <li class="navbar__item">
+        <a class="navbar__link" href="#header">Начало</a>
+      </li>
+      <li class="navbar__item">
+        <a class="navbar__link" href="#html">HTML</a>
+      </li>
+      <li class="navbar__item">
+        <a class="navbar__link" href="#css">CSS</a>
+      </li>
+    </ul>
+  </nav>
+
   <div class="header__overlay"></div>
   <h1 class="header__title">
     <span>Открой</span>
     <span>свой</span>
     <span>потенциал</span>
   </h1>
+  <div class="header__actions">
+  </div>
 </section>
 
-<section class="html">
+<section class="html" id="html">
   <div class="html__overlay"></div>
   <div class="html__content">
     <div class="container">
@@ -40,7 +57,24 @@
   </div>
 </section>
 
+<section class="css" id="css">
+  <div class="css__overlay"></div>
+  <div class="css__content">
+    <div class="container">
+      <h2 class="css__title"><b>CSS</b> - это круто!</h2>
+      <h3 class="css__subtitle">Как стать востребованным <span>веб-разработчиком</span></h3>
+      <div class="css__col-2">
+        <div class="css__logo"><img src="assets/img/css3-logo.png" alt="html5"></div>
+        <p class="css__description">CSS используется для определения стилей (правил) оформления документов — включая
+          дизайн, вёрстку и вариации макета для различных устройств и размеров экрана.</div>
+    </div>
+  </div>
+</section>
+
 <section class="footer"></section>
 
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.nav.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
