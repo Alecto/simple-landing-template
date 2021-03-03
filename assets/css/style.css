@@ -57,8 +57,7 @@ a {
 
   content: "";
 
-  opacity: 0.2;
-  background-color: red;
+  background: linear-gradient(to right, rgba(213, 61, 39, 0.6) 0%, rgba(213, 61, 39, 0.3) 50%, rgba(213, 61, 39, 0.1) 100%);
 
   clip-path: polygon(100% 20%, 100% 70%, 30% 100%, 0% 100%);
 }
@@ -69,8 +68,6 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
-
-  opacity: 0.5;
 }
 
 .header__overlay::before {
@@ -82,6 +79,7 @@ a {
 
   content: "";
 
+  opacity: 0.5;
   background-color: #034052;
 
   clip-path: polygon(0 0, 100% 0, 100% 20vh, 0% 100%);
@@ -96,6 +94,7 @@ a {
 
   content: "";
 
+  opacity: 0.75;
   background-color: #034052;
 
   clip-path: polygon(100% 70vh, 30% 100%, 100% 100%);
@@ -237,8 +236,24 @@ a {
 
   content: "";
 
-  opacity: 0.2;
-  background-color: red;
+  opacity: 0.5;
+  background-color: #d53d27;
 
   clip-path: polygon(0 0, 0 15vh, 30% 0);
+}
+
+.html::after {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  content: "";
+
+  opacity: 0.75;
+  background-color: #034052;
+
+  clip-path: polygon(30% 0, 100% 0, 0 25%, 0 15vh);
 }
