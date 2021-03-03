@@ -6,31 +6,31 @@
 
   @extend %section;
 
-  &::after {
-    @include abs-position;
-    content: "";
-    clip-path: polygon(0 100%, 75% 0, 100% 0, 100% 72%);
-    background: linear-gradient(to right, rgba($color-primary-0, 0.5) 0%, rgba($color-primary-0, 0.25) 50%, rgba($color-primary-0, 0.1) 100%);
-  }
-
   &__overlay {
     @include abs-position;
+    z-index: 1;
+    opacity: 0.4;
 
     &::before {
       @include abs-position;
       content: "";
-      clip-path: polygon(0 0, 75% 0, 0% 100%); // https://bennettfeely.com/clippy/
-      background-color: $color-secondary-2-4;
-      opacity: 0.4;
-      z-index: 1;
+      clip-path: polygon(100% 20%, 100% 20%, 100% 80%, 0% 100%);
+      background-color: $color-primary-0;
     }
 
-    &::after {
-      @include abs-position;
-      content: "";
-      clip-path: polygon(100% 72%, 0% 100%, 100% 100%); // https://bennettfeely.com/clippy/
-      background-color: $color-secondary-2-4;
-      opacity: 0.5;
+    &-extra {
+      &::before {
+        @include abs-position;
+        content: "";
+        clip-path: polygon(0 0, 100% 0, 100% 20%, 0% 100%);
+        background-color: $color-secondary-2-4;
+      }
+      &::after {
+        @include abs-position;
+        content: "";
+        clip-path: polygon(100% 80%, 0% 100%, 100% 100%);
+        background-color: $color-secondary-2-4;
+      }
     }
   }
 

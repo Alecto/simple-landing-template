@@ -1,0 +1,24 @@
+.footer {
+  background-color: $color-secondary-2-4;
+  color: $color-secondary-2-1;
+
+  &__copyright {
+    text-align: center;
+  }
+  &__contacts {
+    @include unlist;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: $gap;
+    margin-bottom: $gap;
+  }
+
+  &__links {
+    color: inherit;
+
+    &:hover {
+      color: $color-light;
+    }
+  }
+}
