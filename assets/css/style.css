@@ -1,7 +1,8 @@
 .header,
 .html,
 .css,
-.javascript {
+.javascript,
+.frontend {
   position: relative;
 
   overflow: hidden;
@@ -12,7 +13,8 @@
 
 .html__title,
 .css__title,
-.javascript__title {
+.javascript__title,
+.frontend__title {
   margin: 0 0 0.4em;
 
   text-align: center;
@@ -25,7 +27,8 @@
 
 .html__title b,
 .css__title b,
-.javascript__title b {
+.javascript__title b,
+.frontend__title b {
   padding-left: 20px;
 
   text-transform: uppercase;
@@ -41,7 +44,8 @@
 
 .html__description,
 .css__description,
-.javascript__description {
+.javascript__description,
+.frontend__description {
   margin: -0.3em 0 0 0;
 
   font-size: 2rem;
@@ -65,6 +69,30 @@ html {
 
   font-family: "Roboto", sans-serif;
   font-size: 16px;
+}
+
+@media (min-width: 1600px) {
+  body .not-responsive {
+    display: none;
+  }
+}
+
+@media (max-width: 1599px) {
+  body > * {
+    display: none !important;
+  }
+  body .not-responsive {
+    display: flex !important;
+    align-items: center;
+
+    height: 100vh;
+    padding-right: 100px;
+    padding-left: 100px;
+
+    color: #034052;
+
+    font-size: 4rem;
+  }
 }
 
 h1 {
@@ -221,7 +249,7 @@ a {
 }
 
 .header__title span:nth-of-type(3) {
-  letter-spacing: 0;
+  position: relative;
 
   font-size: 10rem;
   font-weight: 900;
@@ -245,8 +273,7 @@ a {
   bottom: 0;
   left: 0;
 
-  opacity: 0.9;
-  background-color: #011a21;
+  background: linear-gradient(135deg, rgba(53, 123, 143, 0.75) 0%, rgba(2, 37, 48, 0.9) 30%, rgba(0, 6, 8, 0.9) 100%);
 }
 
 .html__content {
@@ -303,8 +330,7 @@ a {
   bottom: 0;
   left: 0;
 
-  opacity: 0.85;
-  background-color: #fff3e6;
+  background: linear-gradient(135deg, rgba(255, 192, 128, 0.9) 0%, rgba(255, 255, 255, 0.9) 70%);
 }
 
 .css__content {
@@ -364,8 +390,7 @@ a {
   bottom: 0;
   left: 0;
 
-  opacity: 0.85;
-  background-color: #011a21;
+  background: linear-gradient(135deg, rgba(87, 150, 167, 0.5) 0%, rgba(2, 37, 48, 0.85) 30%, rgba(0, 0, 0, 0.9) 100%);
 }
 
 .javascript__content {
@@ -403,6 +428,81 @@ a {
   transform: translateX(-50%);
 
   background-color: #ffffff;
+}
+
+.frontend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #ffffff;
+  background-image: url(../img/fe-logo.png);
+  background-repeat: no-repeat;
+  background-position: -10% -10%;
+  background-size: 75%;
+  text-shadow: 5px 5px 10px #ffffff, 0 0 30px #ffffff;
+}
+
+.frontend__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 50%, rgba(255, 192, 128, 0.4) 100%);
+}
+
+.frontend__content {
+  position: relative;
+  z-index: 1;
+
+  color: #034052;
+}
+
+.frontend__subtitle {
+  position: relative;
+
+  margin: 0 0 3em;
+  padding-left: 400px;
+
+  text-align: center;
+  text-align: left;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  font-size: 3rem;
+  font-weight: 100;
+  font-weight: 700;
+  line-height: 1.25em;
+}
+
+.frontend__subtitle span {
+  white-space: nowrap;
+}
+
+.frontend__subtitle::after {
+  position: absolute;
+  bottom: -1em;
+  left: 50%;
+
+  width: 20%;
+  height: 3px;
+
+  content: "";
+  transform: translateX(-50%);
+
+  background-color: #034052;
+}
+
+.frontend__subtitle::after {
+  display: none;
+}
+
+.frontend__description {
+  padding-left: 270px;
+
+  transform: translateY(40px);
 }
 
 .footer {

@@ -11,8 +11,10 @@
 
   &__overlay {
     @include abs-position;
-    opacity: 0.9;
-    background-color: darken($color-secondary-2-4, 10%);
+    //opacity: 0.9;
+    //background-color: darken($color-secondary-2-4, 10%);
+    background: linear-gradient(135deg, rgba($color-secondary-2-2, 0.75) 0%, rgba(darken($color-secondary-2-4, 7%), 0.9) 30%, rgba(darken($color-secondary-2-4, 15%), 0.9) 100%);
+
   }
 
   &__content {
