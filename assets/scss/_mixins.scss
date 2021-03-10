@@ -1,26 +1,37 @@
 @mixin section-subtitle($color: $color-light) {
   position: relative;
-  font-size: 3rem;
-  text-transform: uppercase;
+
   margin: 0 0 3em;
-  letter-spacing: 0.1em;
-  font-weight: 100;
+
   text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  font-size: 3rem;
+  font-weight: 100;
   line-height: 1.25em;
 
   span {
     white-space: nowrap;
   }
 
+  b {
+    font-weight: 700;
+  }
+
+
   &::after {
-    content: "";
-    height: 3px;
-    width: 20%;
-    background-color: $color;
     position: absolute;
     bottom: -1em;
     left: 50%;
+
+    width: 20%;
+    height: 3px;
+
+    content: "";
     transform: translateX(-50%);
+
+    background-color: $color;
   }
 }
 

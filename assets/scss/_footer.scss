@@ -1,17 +1,20 @@
 .footer {
-  background-color: $color-secondary-2-4;
   color: $color-secondary-2-1;
+  background-color: $color-secondary-2-4;
 
   &__copyright {
     text-align: center;
   }
   &__contacts {
-    @include unlist;
-    font-size: 2rem;
     display: flex;
     justify-content: center;
-    gap: $gap;
+
     margin-bottom: $gap;
+
+    font-size: 2rem;
+
+    gap: $gap;
+    @include unlist;
   }
 
   &__links {

@@ -36,6 +36,14 @@
   font-weight: 900;
 }
 
+.html__title i,
+.css__title i,
+.javascript__title i,
+.frontend__title i {
+  font-size: 0.8em;
+  font-style: normal;
+}
+
 .html__logo img,
 .css__logo img,
 .javascript__logo img {
@@ -298,6 +306,10 @@ a {
   white-space: nowrap;
 }
 
+.html__subtitle b {
+  font-weight: 700;
+}
+
 .html__subtitle::after {
   position: absolute;
   bottom: -1em;
@@ -358,6 +370,10 @@ a {
   white-space: nowrap;
 }
 
+.css__subtitle b {
+  font-weight: 700;
+}
+
 .css__subtitle::after {
   position: absolute;
   bottom: -1em;
@@ -416,6 +432,10 @@ a {
   white-space: nowrap;
 }
 
+.javascript__subtitle b {
+  font-weight: 700;
+}
+
 .javascript__subtitle::after {
   position: absolute;
   bottom: -1em;
@@ -464,21 +484,23 @@ a {
   position: relative;
 
   margin: 0 0 3em;
-  padding-left: 400px;
+  padding-left: 300px;
 
   text-align: center;
-  text-align: left;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 
   font-size: 3rem;
   font-weight: 100;
-  font-weight: 700;
   line-height: 1.25em;
 }
 
 .frontend__subtitle span {
   white-space: nowrap;
+}
+
+.frontend__subtitle b {
+  font-weight: 700;
 }
 
 .frontend__subtitle::after {
